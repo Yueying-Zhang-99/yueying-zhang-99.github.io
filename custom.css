@@ -56,6 +56,8 @@ h3{font-size:var(--small-title-size)}
 .paper-card{margin-bottom:16px;border:1px solid #d9dfe0;border-radius:14px;background:#fff;overflow:hidden;transition:border-color .18s ease,box-shadow .18s ease}
 .paper-card:hover{border-color:#9fcfbd;box-shadow:0 8px 22px rgba(34,94,71,.08)}
 .paper-card:hover>summary{background:#edf8f3}
+.paper-card[data-type="journal"]:hover{border-color:#c7b4d4;box-shadow:0 8px 22px rgba(104,79,120,.09)}
+.paper-card[data-type="journal"]:hover>summary{background:#f3eef6}
 .paper-card summary{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 210px;grid-template-rows:auto auto auto;column-gap:24px;padding:18px 12px 18px 22px;cursor:pointer;list-style:none;transition:background-color .18s ease}
 .paper-card summary::-webkit-details-marker{display:none}
 .paper-card summary::after{content:"＋";position:absolute;top:24px;right:20px;z-index:2;color:#fff;font-size:20px;font-weight:400;text-shadow:0 1px 5px rgba(0,0,0,.55)}
