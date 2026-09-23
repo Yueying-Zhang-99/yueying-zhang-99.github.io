@@ -1,0 +1,16 @@
+:root{--ink:#111;--muted:#181818;--line:#aaa}
+body{color:var(--ink);font-family:"Trebuchet MS","Avenir Next Rounded","Arial Rounded MT Bold",Arial,sans-serif}
+.shell{width:min(1120px,calc(100% - 32px))}
+.color-strip{display:none}
+nav{background:linear-gradient(90deg,var(--yellow),#bdeedb 48%,var(--aqua));border-bottom:0;box-shadow:0 2px 10px rgba(30,70,72,.08);backdrop-filter:none}
+.nav-inner{min-height:70px}
+.brand,.nav-links a{letter-spacing:.05em}
+.brand{font-size:.95rem}
+.hero{padding:64px 0 56px}
+.intro-grid{gap:48px}
+h1{margin-bottom:18px;letter-spacing:-.025em}
+h2{letter-spacing:-.02em}
+.intro-copy,.lead,.timeline-item ul,.content-card p{color:var(--ink)}
+.button-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.button{padding:11px 14px;font-weight:700;letter-spacing:.035em}
+@media(max-width:520px){.shell{width:min(100% - 24px,1120px)}.button-list{grid-template-columns:1fr}}
