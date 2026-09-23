@@ -114,3 +114,33 @@ h3{font-size:var(--small-title-size)}
 .lightbox-arrow:hover{background:rgba(255,255,255,.2)}
 body.lightbox-open{overflow:hidden}
 @media(max-width:700px){.paper-card summary{grid-template-columns:1fr;padding:18px}.paper-card summary::after{top:22px;right:24px;color:#4b6668;text-shadow:none}.paper-card summary h3,.paper-card summary p,.paper-meta{grid-column:1}.paper-cover{grid-column:1;grid-row:auto;min-height:170px;margin-top:14px}.paper-gallery{grid-template-columns:1fr}.gallery-nav{display:none}.gallery-item{min-width:82%}.lightbox{grid-template-columns:42px minmax(0,1fr) 42px;padding:16px 6px}.lightbox-arrow{width:38px;height:38px}}
+
+/* Awards timeline */
+.award-filters{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.award-filters button{padding:7px 15px;border:1px solid #b8c6c7;border-radius:999px;background:#fff;color:#344244;font:inherit;font-size:13px;cursor:pointer}
+.award-filters button:hover{border-color:#5faeb4;background:#f0f9f9}
+.award-filters button.active{border-color:#207b82;background:#207b82;color:#fff}
+.award-timeline{position:relative;margin:0 0 70px;padding-left:34px}
+.award-timeline::before{content:"";position:absolute;top:5px;bottom:0;left:8px;width:2px;background:linear-gradient(#69c5c8,#dce9e9)}
+.award-year{position:relative;padding:0 0 38px;border-top:0}
+.award-year::before{content:"";position:absolute;top:9px;left:-31px;width:12px;height:12px;border:3px solid #fff;border-radius:50%;background:#4eb4b9;box-shadow:0 0 0 1px #79c8cb}
+.award-year>h2{margin:0 0 15px;font-size:22px}
+.award-year-items{display:grid;gap:14px}
+.award-card{position:relative;padding:19px 20px;border:1px solid #d9dfe0;border-radius:14px;background:#fff;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.award-card:hover{z-index:2;transform:scale(1.018);border-color:#9fcfbd;box-shadow:0 12px 26px rgba(31,79,61,.11)}
+.award-card.featured{border-color:#e1c16e;background:linear-gradient(135deg,#fffdf5,#fff9e5)}
+.award-card.featured:hover{border-color:#cda83c;box-shadow:0 12px 28px rgba(157,116,18,.14)}
+.award-topline{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:8px}
+.award-topline time{color:#697174;font-size:12px}
+.award-type{padding:3px 8px;border-radius:999px;font-size:10px;font-weight:750;letter-spacing:.05em;text-transform:uppercase}
+.award-type.scholarship{background:#fff0bd;color:#765600}
+.award-type.competition{background:#e6f4f5;color:#176d74}
+.award-type.honour{background:#f0edf5;color:#685675}
+.award-card h3{margin:0 0 7px;font-size:17px;line-height:1.4}
+.award-cn{margin:0 0 7px;color:#555;font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;font-size:13px;line-height:1.55}
+.award-card>p{margin:0;color:#3f4648;font-size:14px}
+.featured-mark{display:inline-block;margin-top:12px;padding:4px 9px;border:1px solid #e1c16e;border-radius:7px;color:#7d5b00;font-size:11px;font-weight:700}
+.award-team{margin-top:13px;border-top:1px solid #e6e9e9;padding-top:10px}
+.award-team summary{color:#2b7479;font-size:12px;font-weight:650;cursor:pointer}
+.award-team p{margin:9px 0 0;color:#555;font-size:13px}
+@media(max-width:600px){.award-timeline{padding-left:25px}.award-year::before{left:-22px}.award-card:hover{transform:scale(1.008)}.award-topline{align-items:flex-start;flex-direction:column;gap:6px}}
