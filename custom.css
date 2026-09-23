@@ -151,3 +151,40 @@ body.lightbox-open{overflow:hidden}
 .award-team summary{color:#2b7479;font-size:12px;font-weight:650;cursor:pointer}
 .award-team p{margin:9px 0 0;color:#555;font-size:13px}
 @media(max-width:600px){.award-timeline{padding-left:25px}.award-year::before{left:-22px}.award-card:hover{transform:scale(1.008)}.award-topline{align-items:flex-start;flex-direction:column;gap:6px}}
+
+/* Projects index and detail pages */
+.project-filter-panel{display:grid;gap:11px;margin-top:22px;padding:14px 16px;border:1px solid #e1e6e6;border-radius:12px;background:#fbfcfc}
+.project-filters,.project-stage-filters{display:flex;flex-wrap:wrap;gap:8px}
+.project-filters button,.project-stage-filters button{padding:6px 13px;border:1px solid #b8c6c7;border-radius:999px;background:#fff;color:#344244;font:inherit;font-size:12px;cursor:pointer}
+.project-filters button:hover,.project-stage-filters button:hover{border-color:#5faeb4;background:#f0f9f9}
+.project-filters button.active,.project-stage-filters button.active{border-color:#207b82;background:#207b82;color:#fff}
+.project-index-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-top:0;border-top:0}
+.project-index-card{display:flex;flex-direction:column;min-height:235px;padding:21px;border:1px solid #d9dfe0;border-radius:14px;color:#171717;text-decoration:none;transition:border-color .18s ease,box-shadow .18s ease,background-color .18s ease}
+.project-index-card:hover{border-color:#9fcfbd;background:#edf8f3;box-shadow:0 9px 22px rgba(34,94,71,.08)}
+.project-index-card.tentative{border-style:dashed;background:#fbfafc}
+.project-index-meta{display:flex;justify-content:space-between;gap:10px;color:#617073;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.project-index-card h2{margin:18px 0 9px;font-size:21px;line-height:1.35}
+.project-index-card p{margin-bottom:20px;color:#485154;font-size:14px}
+.project-index-card b{margin-top:auto;color:#24777d;font-size:12px}
+.project-detail{padding-bottom:70px}
+.project-hero{padding:72px 0 42px}
+.project-hero>span{color:#1c7d84;font-size:11px;font-weight:750;letter-spacing:.09em;text-transform:uppercase}
+.project-hero h1{max-width:820px;margin:12px 0 18px;font-size:clamp(34px,5vw,55px)}
+.project-hero p{max-width:760px;color:#343b3d;font-size:18px}
+.project-hero.tentative{border-left:4px solid #cbbbd5;padding-left:22px}
+.project-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 0 36px;border-top:0}
+.project-facts div{display:flex;flex-direction:column;gap:5px;padding:15px;border:1px solid #dfe5e5;border-radius:10px;background:#fafcfc}
+.project-facts b{color:#667174;font-size:10px;letter-spacing:.07em;text-transform:uppercase}
+.project-facts span{font-size:13px}
+.project-detail section:not(.project-facts){padding:34px 0}
+.project-detail section p,.project-detail section li{color:#343b3d}
+.project-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.project-gallery div{min-height:180px;display:flex;align-items:flex-end;padding:12px;border-radius:10px;background-image:linear-gradient(145deg,rgba(25,64,68,.18),rgba(13,27,30,.62)),var(--project-image);background-position:center;background-size:cover;color:#fff;font-size:12px;font-weight:650}
+.related-paper{display:block;margin-bottom:12px;padding:18px 19px;border:1px solid #d9dfe0;border-radius:12px;color:#171717;text-decoration:none}
+.related-paper:hover{border-color:#9fcfbd;background:#edf8f3}
+.related-paper>span{color:#26767b;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.related-paper h3{margin:7px 0;font-size:16px}
+.related-paper p{margin:0;font-size:13px}
+.project-empty{padding:15px;border-left:3px solid #9fc8ca;background:#f4f9f9}
+@media(max-width:700px){.project-index-grid{grid-template-columns:1fr}.project-facts{grid-template-columns:1fr 1fr}.project-gallery{grid-template-columns:1fr}.project-gallery div{min-height:220px}}
+@media(max-width:460px){.project-facts{grid-template-columns:1fr}}
