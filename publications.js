@@ -1,10 +1,17 @@
 const filterButtons = document.querySelectorAll('[data-filter]');
+const topicButtons = document.querySelectorAll('[data-topic-filter]');
 const papers = document.querySelectorAll('.paper-card[data-type]');
 const yearSections = document.querySelectorAll('.pub-year');
+const emptyMessage = document.getElementById('publication-filter-empty');
+let activeType = 'all';
+let activeTopic = 'all';
 
-function filterPublications(type) {
+function filterPublications() {
   papers.forEach((paper) => {
-    const visible = type === 'all' || paper.dataset.type === type;
+    const typeMatches = activeType === 'all' || paper.dataset.type === activeType;
+    const topics = (paper.dataset.topics || '').split(' ');
+    const topicMatches = activeTopic === 'all' || topics.includes(activeTopic);
+    const visible = typeMatches && topicMatches;
     paper.hidden = !visible;
     if (!visible) paper.open = false;
   });
@@ -14,16 +21,31 @@ function filterPublications(type) {
       .some((paper) => !paper.hidden);
     section.hidden = !hasVisiblePaper;
   });
+  emptyMessage.hidden = ![...papers].every((paper) => paper.hidden);
 
   filterButtons.forEach((button) => {
-    const active = button.dataset.filter === type;
+    const active = button.dataset.filter === activeType;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
+  topicButtons.forEach((button) => {
+    const active = button.dataset.topicFilter === activeTopic;
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', String(active));
   });
 }
 
 filterButtons.forEach((button) => {
-  button.addEventListener('click', () => filterPublications(button.dataset.filter));
+  button.addEventListener('click', () => {
+    activeType = button.dataset.filter;
+    filterPublications();
+  });
+});
+topicButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    activeTopic = button.dataset.topicFilter;
+    filterPublications();
+  });
 });
 
 // Close an expanded publication once the entire card has left the viewport.

@@ -48,23 +48,29 @@ h3{font-size:var(--small-title-size)}
 /* Publications */
 .pub-note{margin-top:22px;font-size:14px;color:#555}
 .pub-filters{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
-.pub-filters button{padding:7px 15px;border:1px solid #b8c6c7;border-radius:999px;background:#fff;color:#344244;font:inherit;font-size:13px;cursor:pointer}
-.pub-filters button:hover{border-color:#5faeb4;background:#f0f9f9}
-.pub-filters button.active{border-color:#207b82;background:#207b82;color:#fff}
+.publication-filter-panel{display:grid;gap:11px;margin-top:22px;padding:14px 16px;border:1px solid #e1e6e6;border-radius:12px;background:#fbfcfc}
+.filter-row{display:grid;grid-template-columns:52px 1fr;align-items:start;gap:10px}
+.filter-label{padding-top:7px;color:#687174;font-size:11px;font-weight:750;letter-spacing:.07em;text-transform:uppercase}
+.pub-filters,.topic-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.pub-filters button,.topic-filters button{padding:6px 13px;border:1px solid #b8c6c7;border-radius:999px;background:#fff;color:#344244;font:inherit;font-size:12px;cursor:pointer}
+.pub-filters button:hover,.topic-filters button:hover{border-color:#5faeb4;background:#f0f9f9}
+.pub-filters button.active,.topic-filters button.active{border-color:#207b82;background:#207b82;color:#fff}
+.filter-empty{margin:18px 0;padding:14px 16px;border-left:3px solid #8abfc2;background:#f3f9f9;color:#536164;font-size:13px}
 .pub-year{padding-top:28px}
 .pub-year>h2{margin-bottom:16px}
-.paper-card{margin-bottom:16px;border:1px solid #d9dfe0;border-radius:14px;background:#fff;overflow:hidden;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.paper-card{margin-bottom:16px;border:1px solid #d9dfe0;border-radius:14px;background:#fff;overflow:hidden;transition:border-color .18s ease,box-shadow .18s ease}
 .paper-card:hover{border-color:#9fcfbd;box-shadow:0 8px 22px rgba(34,94,71,.08)}
 .paper-card:hover>summary{background:#edf8f3}
 .paper-card[data-type="journal"]:hover{border-color:#e1d7e7;box-shadow:0 8px 22px rgba(104,79,120,.05)}
 .paper-card[data-type="journal"]:hover>summary{background:#faf7fb}
-@media(hover:hover){.paper-card:hover{z-index:2;transform:scale(1.008)}}
 .paper-card summary{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 210px;grid-template-rows:auto auto auto;column-gap:24px;padding:18px 12px 18px 22px;cursor:pointer;list-style:none;transition:background-color .18s ease}
 .paper-card summary::-webkit-details-marker{display:none}
 .paper-card summary::after{content:"＋";position:absolute;top:24px;right:20px;z-index:2;color:#fff;font-size:20px;font-weight:400;text-shadow:0 1px 5px rgba(0,0,0,.55)}
 .paper-card[open] summary::after{content:"−"}
 .paper-card summary h3{grid-column:1;max-width:100%;margin:9px 0 7px;font-size:18px;line-height:1.45}
 .paper-card summary p{margin:0;font-size:14px;color:#333}
+.paper-keywords{grid-column:1;display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.paper-keywords span{padding:3px 8px;border:1px solid #d8e2e2;border-radius:999px;background:#f6f9f9;color:#536164;font-size:10px;font-weight:650}
 .paper-meta{grid-column:1;display:flex;align-items:center;flex-wrap:wrap;gap:9px;color:#62686b;font-size:12px}
 .paper-type{padding:3px 8px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 .paper-type.journal{border:1px solid #ddd3e3;background:#f6f2f8;color:#725f7d;box-shadow:none}
@@ -97,7 +103,7 @@ h3{font-size:var(--small-title-size)}
 @media(max-width:700px){.paper-gallery{grid-template-columns:1fr}.gallery-item{min-height:210px}.paper-card summary h3{max-width:88%;font-size:16px}}
 
 /* Publication covers, scrolling galleries, and lightbox */
-.paper-cover{grid-column:2;grid-row:1/4;min-height:145px;margin:0;border-radius:10px;background-image:linear-gradient(145deg,rgba(29,54,58,.14),rgba(14,25,29,.5)),var(--cover-image);background-position:center;background-size:cover;display:flex;align-items:flex-end;padding:11px}
+.paper-cover{grid-column:2;grid-row:1/5;min-height:145px;margin:0;border-radius:10px;background-image:linear-gradient(145deg,rgba(29,54,58,.14),rgba(14,25,29,.5)),var(--cover-image);background-position:center;background-size:cover;display:flex;align-items:flex-end;padding:11px}
 .paper-cover span{padding:5px 8px;border-radius:6px;background:rgba(0,0,0,.58);color:#fff;font-size:11px;font-weight:650}
 .paper-gallery{display:grid;grid-template-columns:34px minmax(0,1fr) 34px;align-items:center;gap:8px;order:2}
 .gallery-track{display:flex;gap:10px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:thin;padding:2px 0 9px}
@@ -114,7 +120,7 @@ h3{font-size:var(--small-title-size)}
 .lightbox-arrow{width:46px;height:46px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(255,255,255,.09);color:#fff;font-size:31px;cursor:pointer}
 .lightbox-arrow:hover{background:rgba(255,255,255,.2)}
 body.lightbox-open{overflow:hidden}
-@media(max-width:700px){.paper-card summary{grid-template-columns:1fr;padding:18px}.paper-card summary::after{top:22px;right:24px;color:#4b6668;text-shadow:none}.paper-card summary h3,.paper-card summary p,.paper-meta{grid-column:1}.paper-cover{grid-column:1;grid-row:auto;min-height:170px;margin-top:14px}.paper-gallery{grid-template-columns:1fr}.gallery-nav{display:none}.gallery-item{min-width:82%}.lightbox{grid-template-columns:42px minmax(0,1fr) 42px;padding:16px 6px}.lightbox-arrow{width:38px;height:38px}}
+@media(max-width:700px){.filter-row{grid-template-columns:1fr;gap:4px}.filter-label{padding-top:0}.paper-card summary{grid-template-columns:1fr;padding:18px}.paper-card summary::after{top:22px;right:24px;color:#4b6668;text-shadow:none}.paper-card summary h3,.paper-card summary p,.paper-meta,.paper-keywords{grid-column:1}.paper-cover{grid-column:1;grid-row:auto;min-height:170px;margin-top:14px}.paper-gallery{grid-template-columns:1fr}.gallery-nav{display:none}.gallery-item{min-width:82%}.lightbox{grid-template-columns:42px minmax(0,1fr) 42px;padding:16px 6px}.lightbox-arrow{width:38px;height:38px}}
 
 /* Awards timeline */
 .award-filters{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
