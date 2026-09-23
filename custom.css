@@ -29,7 +29,7 @@ h3{font-size:var(--small-title-size)}
 .intro-copy,.lead,.timeline-item ul,.content-card p{color:var(--ink)}
 .button-list{grid-template-columns:repeat(2,180px);column-gap:18px;row-gap:17px;justify-content:start}
 .button{display:flex;align-items:center;justify-content:center;padding:10px 14px;border:1px solid #cbd3d4;border-radius:12px;background:#f9fbfb;font-weight:600;letter-spacing:.01em;text-align:center;box-shadow:0 4px 12px rgba(20,50,52,.05)}
-.button:hover{color:var(--ink);background:#eaf7f7;border-color:#78cbd0;transform:translateY(-1px)}
+.button:hover{color:#fff;background:#111;border-color:#111;transform:translateY(-1px);box-shadow:0 7px 17px rgba(0,0,0,.14)}
 .link-icon{width:30px;height:30px;flex:0 0 30px;display:inline-flex;align-items:center;justify-content:center;margin-right:2px;border:1px solid #bcdfe1;border-radius:9px;background:#dff2f3;color:#126e75;font-size:11px;font-weight:800;line-height:1;letter-spacing:-.02em}
 .button:nth-child(4) .link-icon{background:#e9f6d5;color:#568a20}
 .button:nth-child(5) .link-icon{background:#e7f0fa;color:#0a66c2}
@@ -54,8 +54,9 @@ h3{font-size:var(--small-title-size)}
 .pub-year{padding-top:28px}
 .pub-year>h2{margin-bottom:16px}
 .paper-card{margin-bottom:16px;border:1px solid #d9dfe0;border-radius:14px;background:#fff;overflow:hidden;transition:border-color .18s ease,box-shadow .18s ease}
-.paper-card:hover{border-color:#9cced1;box-shadow:0 8px 22px rgba(25,55,58,.07)}
-.paper-card summary{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 210px;grid-template-rows:auto auto auto;column-gap:24px;padding:18px 12px 18px 22px;cursor:pointer;list-style:none}
+.paper-card:hover{border-color:#9fcfbd;box-shadow:0 8px 22px rgba(34,94,71,.08)}
+.paper-card:hover>summary{background:#edf8f3}
+.paper-card summary{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 210px;grid-template-rows:auto auto auto;column-gap:24px;padding:18px 12px 18px 22px;cursor:pointer;list-style:none;transition:background-color .18s ease}
 .paper-card summary::-webkit-details-marker{display:none}
 .paper-card summary::after{content:"＋";position:absolute;top:24px;right:20px;z-index:2;color:#fff;font-size:20px;font-weight:400;text-shadow:0 1px 5px rgba(0,0,0,.55)}
 .paper-card[open] summary::after{content:"−"}
