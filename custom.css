@@ -43,7 +43,7 @@ h3{font-size:var(--small-title-size)}
 .topic-grid{grid-template-columns:repeat(4,1fr)}
 .topic:nth-child(4){background-image:linear-gradient(rgba(67,34,29,.48),rgba(67,34,29,.72)),url("activities.jpg")}
 @media(max-width:800px){.intro-grid{grid-template-columns:1fr;gap:38px}.intro-grid>.portrait{grid-column:1;grid-row:1}.intro-grid>div{grid-column:1;grid-row:2}.portrait{width:250px;height:250px;margin:0 auto}}
-@media(max-width:520px){.shell{width:min(100% - 24px,var(--content-width))}.button-list{grid-template-columns:1fr;width:100%}:root{--body-size:15px;--name-size:34px;--section-size:23px}}
+@media(max-width:520px){.shell{width:min(100% - 24px,var(--content-width))}.button-list{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;column-gap:9px;row-gap:10px}.button{padding:9px 7px;font-size:12px}:root{--body-size:15px;--name-size:34px;--section-size:23px}}
 
 /* Publications */
 .pub-note{margin-top:22px;font-size:14px;color:#555}
