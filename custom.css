@@ -16,7 +16,7 @@ body{font-size:var(--body-size)}
 .color-strip{display:none}
 nav{background:linear-gradient(90deg,var(--yellow),#bdeedb 48%,var(--aqua));border-bottom:0;box-shadow:0 2px 10px rgba(30,70,72,.08);backdrop-filter:none}
 .nav-inner{min-height:70px}
-.brand,.nav-links a{font-size:var(--nav-size);letter-spacing:.05em}
+.brand,.nav-links a{font-size:var(--nav-size);font-weight:400;letter-spacing:.05em}
 .brand{font-size:.95rem}
 .hero{padding:64px 0 56px}
 .intro-grid{grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:64px}
@@ -40,5 +40,7 @@ h3{font-size:var(--small-title-size)}
 .topic:nth-child(3){background-image:linear-gradient(rgba(66,39,22,.48),rgba(66,39,22,.72)),url("awards.jpg")}
 .topic:nth-child(4){background-image:linear-gradient(rgba(25,55,39,.48),rgba(25,55,39,.72)),url("design.jpg")}
 .topic:nth-child(5){background-image:linear-gradient(rgba(67,34,29,.48),rgba(67,34,29,.72)),url("activities.jpg")}
+.topic-grid{grid-template-columns:repeat(4,1fr)}
+.topic:nth-child(4){background-image:linear-gradient(rgba(67,34,29,.48),rgba(67,34,29,.72)),url("activities.jpg")}
 @media(max-width:800px){.intro-grid{grid-template-columns:1fr;gap:38px}.intro-grid>.portrait{grid-column:1;grid-row:1}.intro-grid>div{grid-column:1;grid-row:2}.portrait{width:250px;height:250px;margin:0 auto}}
 @media(max-width:520px){.shell{width:min(100% - 24px,var(--content-width))}.button-list{grid-template-columns:1fr;width:100%}:root{--body-size:15px;--name-size:34px;--section-size:23px}}
