@@ -56,8 +56,8 @@ h3{font-size:var(--small-title-size)}
 .paper-card{margin-bottom:16px;border:1px solid #d9dfe0;border-radius:14px;background:#fff;overflow:hidden;transition:border-color .18s ease,box-shadow .18s ease}
 .paper-card:hover{border-color:#9fcfbd;box-shadow:0 8px 22px rgba(34,94,71,.08)}
 .paper-card:hover>summary{background:#edf8f3}
-.paper-card[data-type="journal"]:hover{border-color:#c7b4d4;box-shadow:0 8px 22px rgba(104,79,120,.09)}
-.paper-card[data-type="journal"]:hover>summary{background:#f3eef6}
+.paper-card[data-type="journal"]:hover{border-color:#e1d7e7;box-shadow:0 8px 22px rgba(104,79,120,.05)}
+.paper-card[data-type="journal"]:hover>summary{background:#faf7fb}
 .paper-card summary{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 210px;grid-template-rows:auto auto auto;column-gap:24px;padding:18px 12px 18px 22px;cursor:pointer;list-style:none;transition:background-color .18s ease}
 .paper-card summary::-webkit-details-marker{display:none}
 .paper-card summary::after{content:"＋";position:absolute;top:24px;right:20px;z-index:2;color:#fff;font-size:20px;font-weight:400;text-shadow:0 1px 5px rgba(0,0,0,.55)}
@@ -66,7 +66,7 @@ h3{font-size:var(--small-title-size)}
 .paper-card summary p{margin:0;font-size:14px;color:#333}
 .paper-meta{grid-column:1;display:flex;align-items:center;flex-wrap:wrap;gap:9px;color:#62686b;font-size:12px}
 .paper-type{padding:3px 8px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.paper-type.journal{border:1px solid #bca8ca;background:#ece6f0;color:#684f78;box-shadow:none}
+.paper-type.journal{border:1px solid #ddd3e3;background:#f6f2f8;color:#725f7d;box-shadow:none}
 .paper-type.conference{border:1px solid #aad5d8;background:#e7f6f7;color:#176d74}
 .rank-badge{padding:3px 8px;border:1px solid #e5b94b;border-radius:999px;background:#fff5cf;color:#7a5700;font-size:11px;font-weight:750}
 .rank-badge.citescore{border-color:#e7a6b5;background:#fff0f3;color:#9c3650}
