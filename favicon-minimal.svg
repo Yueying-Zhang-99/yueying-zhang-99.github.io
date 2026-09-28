@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Minimal illustrated portrait of Yueying Zhang">
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="#ffe57b"/>
+  <circle cx="32" cy="31" r="24" fill="#36b8df"/>
+  <path d="M15 60c2-13 7-20 17-20s15 7 17 20" fill="#e65636"/>
+  <path d="M19 35V25C19 14 24 10 32 10s13 4 13 15v20c0 4-3 7-7 7l-3-5H25l-3 5c-4 0-7-3-7-7V35z" fill="#202332"/>
+  <path d="M23 28c0-9 3-13 9-13s9 4 9 13v8c0 8-4 13-9 13s-9-5-9-13z" fill="#ffddbf"/>
+  <path d="M23 30c-1-13 6-16 10-16 8 0 11 6 9 16-2-3-5-7-6-10-3 5-8 8-13 10z" fill="#202332"/>
+  <circle cx="28" cy="34" r="1.25" fill="#202332"/>
+  <circle cx="36" cy="34" r="1.25" fill="#202332"/>
+  <path d="M29 41c2 2 4 2 6 0" fill="none" stroke="#cf6b60" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M25 47c2 4 5 6 7 6s5-2 7-6l-3-2c-1 2-3 3-4 3s-3-1-4-3z" fill="#fff1d9"/>
+</svg>
