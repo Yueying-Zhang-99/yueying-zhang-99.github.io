@@ -1,2 +1,195 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Activities | Yueying Zhang</title><link rel="icon" type="image/png" href="/favicon-portrait-transparent.png"><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/custom.css"></head><body><div class="color-strip"></div><nav><div class="shell nav-inner"><a class="brand" href="index.html">ZHANG YUEYING</a><div class="nav-links"><a href="index.html">About Me</a><a href="publications.html">Publications</a><a href="projects.html">Projects</a><a href="awards.html">Awards</a><a href="activities.html">Activities</a></div></div></nav><main class="shell"><header class="page-head"><div class="eyebrow">Beyond Research</div><h1>Activities</h1><p class="lead">Academic events, workshops, presentations, and community engagement.</p></header><section><article class="content-card" id="ecaade2026-workshop"><div class="eyebrow">Workshop · eCAADe 2026</div><h2>Human–AI Collaborative Interpretation with Generative Video</h2><p><strong>7–11 September 2026 · Lübeck, Germany</strong></p><p>The HACI workshop explored how visitors can use spatially constrained image-to-video generation to animate activities depicted in Chinese classical paintings and engage with the relationships between tangible heritage spaces and intangible cultural practices.</p><figure style="margin:18px 0 0"><img src="assets/images/publications/haci-workshop-demo.jpg" alt="Participant using a mobile device during the HACI heritage interpretation workshop" style="display:block;width:100%;height:auto;border-radius:10px"><figcaption style="margin-top:8px;color:#666;font-size:13px">HACI workshop demonstration at eCAADe 2026.</figcaption></figure><div class="paper-links" style="margin-top:16px"><a href="publications.html#haci-paper">View the related paper, abstract, and image gallery</a></div></article></section></main><footer><div class="shell footer-inner"><span>© Yueying Zhang</span><a class="footer-home" href="index.html">ZHANG YUEYING</a></div></footer></body></html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Workshops, competitions, conference participation, fieldwork, and courses by Yueying Zhang.">
+  <title>Activities | Yueying Zhang</title>
+  <link rel="icon" type="image/png" href="/favicon-portrait-transparent.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>
+    .activity-filter-panel{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 32px;padding:14px;border:1px solid #e1e6e6;border-radius:12px;background:#fbfcfc}
+    .activity-filter-panel button{padding:7px 14px;border:1px solid #b8c6c7;border-radius:999px;background:#fff;color:#344244;font:inherit;font-size:12px;cursor:pointer}
+    .activity-filter-panel button:hover{border-color:#5faeb4;background:#f0f9f9}
+    .activity-filter-panel button.active{border-color:#207b82;background:#207b82;color:#fff}
+    .activity-timeline{position:relative;margin:0 0 64px;padding-left:34px}
+    .activity-timeline:before{position:absolute;top:8px;bottom:10px;left:8px;width:2px;background:linear-gradient(#69c5c8,#dce9e9);content:""}
+    .activity-year{position:relative;margin:0 0 32px}
+    .activity-year>h2{margin:0 0 14px;font-size:23px}
+    .activity-year>h2:before{position:absolute;top:8px;left:-31px;width:12px;height:12px;border:3px solid #fff;border-radius:50%;background:#4eb4b9;box-shadow:0 0 0 1px #79c8cb;content:""}
+    .activity-list{display:grid;gap:14px}
+    .activity-card{overflow:hidden;border:1px solid #d9dfe0;border-radius:14px;background:#fff;transition:border-color .18s ease,box-shadow .18s ease}
+    .activity-card:hover{border-color:#9fcfbd;box-shadow:0 8px 22px rgba(34,94,71,.08)}
+    .activity-card[hidden],.activity-year[hidden]{display:none!important}
+    .activity-copy{padding:20px 22px 16px}
+    .activity-meta{display:flex;flex-wrap:wrap;align-items:center;gap:9px;color:#62686b;font-size:12px}
+    .activity-type{padding:3px 8px;border:1px solid #aad5d8;border-radius:999px;background:#e7f6f7;color:#176d74;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .activity-type.competition{border-color:#e5c878;background:#fff7dc;color:#795d12}
+    .activity-card h3{margin:10px 0 7px;font-size:19px;line-height:1.4}
+    .activity-place{margin:0 0 10px;color:#536164;font-size:13px}
+    .activity-copy>p:last-child{margin-bottom:0;color:#343b3d;font-size:14px;line-height:1.7}
+    .activity-gallery{position:relative;padding:0 22px 18px}
+    .activity-gallery h4{margin:0 0 9px;color:#687174;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .activity-photos{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;padding:2px 0 8px}
+    .activity-photo{position:relative;flex:0 0 min(250px,72vw);height:165px;overflow:hidden;border:0;border-radius:9px;background:#eef3f3;cursor:zoom-in;scroll-snap-align:start}
+    .activity-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .22s ease}
+    .activity-photo:hover img{transform:scale(1.035)}
+    .activity-photo span{position:absolute;right:8px;bottom:8px;left:8px;width:max-content;max-width:calc(100% - 16px);padding:4px 8px;border-radius:5px;background:rgba(45,45,45,.72);color:#fff;font-size:11px;text-align:left}
+    .activity-empty-gallery{display:flex;min-height:76px;align-items:center;padding:14px;border:1px dashed #cbd6d7;border-radius:9px;background:#fafcfc;color:#687174;font-size:12px}
+    .activity-empty{display:none;margin:0 0 60px;padding:16px;border-left:3px solid #8abfc2;background:#f3f9f9;color:#536164;font-size:13px}
+    .activity-empty.visible{display:block}
+    .activity-lightbox[hidden]{display:none}
+    .activity-lightbox{position:fixed;inset:0;z-index:110;display:grid;grid-template-columns:52px minmax(0,1fr) 52px;align-items:center;gap:12px;padding:24px;background:rgba(8,12,14,.92)}
+    .activity-lightbox figure{max-width:min(1100px,100%);max-height:90vh;margin:auto;text-align:center}
+    .activity-lightbox img{display:block;max-width:100%;max-height:80vh;margin:auto;border-radius:8px;object-fit:contain}
+    .activity-lightbox figcaption{margin-top:10px;color:#fff;font-size:13px}
+    .activity-lightbox button{width:42px;height:42px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:26px;cursor:pointer}
+    .activity-lightbox .close{position:absolute;top:18px;right:22px;border:0;background:transparent;font-size:32px}
+    @media(max-width:600px){.activity-timeline{padding-left:25px}.activity-year>h2:before{left:-22px}.activity-copy{padding:17px}.activity-gallery{padding:0 17px 15px}.activity-lightbox{grid-template-columns:36px minmax(0,1fr) 36px;gap:4px;padding:12px 4px}.activity-lightbox button{width:34px;height:34px;font-size:22px}}
+  </style>
+</head>
+<body>
+  <div class="color-strip"></div>
+  <nav><div class="shell nav-inner"><a class="brand" href="index.html">ZHANG YUEYING</a><div class="nav-links"><a href="index.html">About Me</a><a href="publications.html">Publications</a><a href="projects.html">Projects</a><a href="awards.html">Awards</a><a href="activities.html">Activities</a></div></div></nav>
+  <main class="shell">
+    <header class="page-head">
+      <div class="eyebrow">Beyond Research</div>
+      <h1>Activities</h1>
+      <p class="lead">Competitions, fieldwork, workshops, conferences, and courses, arranged as a timeline.</p>
+      <div class="activity-filter-panel" role="group" aria-label="Filter activities by category">
+        <button class="active" type="button" data-activity-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-activity-filter="competition" aria-pressed="false">Competitions</button>
+        <button type="button" data-activity-filter="practice" aria-pressed="false">Social Practice</button>
+        <button type="button" data-activity-filter="workshop" aria-pressed="false">Workshops</button>
+        <button type="button" data-activity-filter="conference" aria-pressed="false">Conferences</button>
+        <button type="button" data-activity-filter="course" aria-pressed="false">Courses</button>
+      </div>
+    </header>
+    <p class="activity-empty" id="activity-empty" role="status">No activities in this category yet.</p>
+    <div class="activity-timeline" id="activity-timeline">
+      <section class="activity-year" data-year="2026">
+        <h2>2026</h2>
+        <div class="activity-list">
+          <article class="activity-card" id="ecaade2026-workshop" data-activity-type="workshop">
+            <div class="activity-copy">
+              <div class="activity-meta"><span class="activity-type">Workshop</span><time datetime="2026-09-07">7–11 September 2026</time></div>
+              <h3>Human–AI Collaborative Interpretation with Generative Video</h3>
+              <p class="activity-place">eCAADe 2026 · Lübeck, Germany</p>
+              <p>A hands-on HACI workshop exploring how visitors can animate activities in Chinese classical paintings with spatially constrained image-to-video generation, and interpret the relationship between heritage spaces and cultural practices.</p>
+              <div class="paper-links" style="margin-top:14px"><a href="publications.html#haci-paper">Related paper and research details</a></div>
+            </div>
+            <div class="activity-gallery" data-gallery>
+              <h4>Photo Gallery</h4>
+              <div class="activity-photos">
+                <button class="activity-photo" type="button" data-src="assets/images/publications/haci-workshop-demo.jpg" data-caption="Workshop demonstration at eCAADe 2026"><img src="assets/images/publications/haci-workshop-demo.jpg" alt="Participant using a mobile device during the HACI workshop"><span>Workshop demonstration</span></button>
+                <button class="activity-photo" type="button" data-src="assets/images/publications/haci-onsite-demo.jpg" data-caption="On-site interpretation with a heritage painting and mobile device"><img src="assets/images/publications/haci-onsite-demo.jpg" alt="Mobile device used to explore a heritage painting on site"><span>On-site experience</span></button>
+                <button class="activity-photo" type="button" data-src="assets/images/publications/haci-workflow.jpg" data-caption="Human–AI Collaborative Interpretation workflow"><img src="assets/images/publications/haci-workflow.jpg" alt="Diagram of the Human–AI Collaborative Interpretation workflow"><span>HACI workflow</span></button>
+                <button class="activity-photo" type="button" data-src="assets/images/publications/haci-generation-examples.jpg" data-caption="Examples of participant image-to-video generations"><img src="assets/images/publications/haci-generation-examples.jpg" alt="Examples of generated videos from participant sessions"><span>Participant generations</span></button>
+                <button class="activity-photo" type="button" data-src="assets/images/publications/haci-animation-loop.gif" data-caption="Generative video example based on a Chinese classical painting"><img src="assets/images/publications/haci-animation-loop.gif" alt="Looping generated animation of a classical garden painting"><span>Generative video</span></button>
+                <button class="activity-photo" type="button" data-src="assets/images/publications/paper-haci-01.jpg" data-caption="Demonstrating the HACI activity during the conference"><img src="assets/images/publications/paper-haci-01.jpg" alt="Researcher demonstrating the heritage interpretation activity"><span>Live demonstration</span></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="activity-year" data-year="2023">
+        <h2>2023</h2>
+        <div class="activity-list">
+          <article class="activity-card" data-activity-type="competition">
+            <div class="activity-copy">
+              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2023">2023</time></div>
+              <h3>8th National University Timber Structure Design Competition · Third Prize</h3>
+              <p class="activity-place">National university competition · China</p>
+              <p>Team design project: <em>Timber-Woven Arch, Wan’an Reborn</em>, a reconstruction design for Wan’an Bridge in Pingnan, Fujian. Yueying Zhang contributed as one of six team members.</p>
+              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
+            </div>
+            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
+          </article>
+        </div>
+      </section>
+      <section class="activity-year" data-year="2022">
+        <h2>2022</h2>
+        <div class="activity-list">
+          <article class="activity-card" data-activity-type="competition">
+            <div class="activity-copy">
+              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2022">2022</time></div>
+              <h3>“Qingrun Award” Student Paper Competition · Excellence Award</h3>
+              <p class="activity-place">China · Student research competition</p>
+              <p>Research on the carbon-reduction potential of prefabricated reinforcement cages in rural building envelopes, using the Peixian Party-Mass Activity Centre as a case study. Yueying Zhang contributed as one of two team members.</p>
+              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
+            </div>
+            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
+          </article>
+        </div>
+      </section>
+      <section class="activity-year" data-year="2021">
+        <h2>2021</h2>
+        <div class="activity-list">
+          <article class="activity-card" data-activity-type="competition">
+            <div class="activity-copy">
+              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2021">2021</time></div>
+              <h3>“Youth Drawing the Countryside” Cultural and Creative Design Competition · Bronze Award</h3>
+              <p class="activity-place">Jiangsu Province, China</p>
+              <p>Student-group team project, <em>Sustaining the Canal, Revitalising the Countryside</em>, focused on rural revitalisation and the Grand Canal.</p>
+              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
+            </div>
+            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
+          </article>
+        </div>
+      </section>
+      <section class="activity-year" data-year="2019">
+        <h2>2019</h2>
+        <div class="activity-list">
+          <article class="activity-card" data-activity-type="competition">
+            <div class="activity-copy">
+              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2019">2019</time></div>
+              <h3>China “Internet+” College Student Innovation and Entrepreneurship Competition · Bronze Award</h3>
+              <p class="activity-place">China · National competition</p>
+              <p>Team project, <em>Building Across the World</em>, exploring how architectural planning can support rural revitalisation.</p>
+              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
+            </div>
+            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
+          </article>
+          <article class="activity-card" data-activity-type="competition">
+            <div class="activity-copy">
+              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2019">2019</time></div>
+              <h3>Yangtze River Delta University Landmark Design Competition · Gold and Best Planning Awards</h3>
+              <p class="activity-place">Yangtze River Delta, China</p>
+              <p>Team project, <em>Cloud · Network</em>, recognised for its planning proposal in a regional university design competition.</p>
+              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
+            </div>
+            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer><div class="shell footer-inner"><span>© Yueying Zhang</span><a class="footer-home" href="index.html">ZHANG YUEYING</a></div></footer>
+  <div class="activity-lightbox" id="activity-lightbox" hidden aria-modal="true" role="dialog" aria-label="Activity photo viewer"><button class="close" type="button" aria-label="Close">×</button><button class="prev" type="button" aria-label="Previous photo">‹</button><figure><img src="" alt=""><figcaption></figcaption></figure><button class="next" type="button" aria-label="Next photo">›</button></div>
+  <script>
+    (()=>{
+      const filters=[...document.querySelectorAll('[data-activity-filter]')];
+      const cards=[...document.querySelectorAll('.activity-card')];
+      const years=[...document.querySelectorAll('.activity-year')];
+      const empty=document.getElementById('activity-empty');
+      filters.forEach(button=>button.addEventListener('click',()=>{
+        const type=button.dataset.activityFilter;
+        filters.forEach(item=>{const active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active));});
+        cards.forEach(card=>card.hidden=type!=='all'&&card.dataset.activityType!==type);
+        years.forEach(year=>year.hidden=!year.querySelector('.activity-card:not([hidden])'));
+        empty.classList.toggle('visible',!cards.some(card=>!card.hidden));
+      }));
+      const viewer=document.getElementById('activity-lightbox'),image=viewer.querySelector('img'),caption=viewer.querySelector('figcaption');
+      let photos=[],index=0;
+      const show=(next)=>{index=(next+photos.length)%photos.length;const photo=photos[index];image.src=photo.dataset.src;image.alt=photo.querySelector('img').alt;caption.textContent=photo.dataset.caption||'';};
+      document.querySelectorAll('.activity-photos').forEach(gallery=>gallery.querySelectorAll('.activity-photo').forEach((photo,i,list)=>photo.addEventListener('click',()=>{photos=[...list];show(i);viewer.hidden=false;document.body.style.overflow='hidden';viewer.querySelector('.close').focus();})));
+      viewer.querySelector('.close').addEventListener('click',()=>{viewer.hidden=true;image.src='';document.body.style.overflow='';});
+      viewer.querySelector('.prev').addEventListener('click',()=>show(index-1));
+      viewer.querySelector('.next').addEventListener('click',()=>show(index+1));
+      viewer.addEventListener('click',event=>{if(event.target===viewer){viewer.querySelector('.close').click();}});
+      document.addEventListener('keydown',event=>{if(viewer.hidden)return;if(event.key==='Escape')viewer.querySelector('.close').click();if(event.key==='ArrowLeft')show(index-1);if(event.key==='ArrowRight')show(index+1);});
+    })();
+  </script>
+</body>
+</html>
