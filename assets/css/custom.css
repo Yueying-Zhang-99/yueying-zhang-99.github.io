@@ -250,3 +250,5 @@ body.lightbox-open{overflow:hidden}
 /* Publication images: keep covers free of overlaid titles; use quiet grey labels in galleries. */
 .paper-cover > span{display:none}
 .gallery-item > span{background:rgba(76,76,76,.82);color:#fff}
+
+.paper-cover-gif{background-size:100% 100%,contain;background-position:center;background-repeat:no-repeat;background-color:#e9ece4}
