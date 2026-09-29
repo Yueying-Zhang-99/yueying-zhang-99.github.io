@@ -245,3 +245,4 @@ body.lightbox-open{overflow:hidden}
 .project-index-cover{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.085)),var(--project-cover)}
 .project-gallery div{background-image:linear-gradient(145deg,rgba(20,30,32,.035),rgba(20,30,32,.10)),var(--project-image)}
 .project-paper-cover{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.085)),var(--paper-cover)}
+.abstract-highlight{color:#26767b;font-weight:400}
