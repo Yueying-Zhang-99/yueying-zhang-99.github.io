@@ -229,3 +229,19 @@ body.lightbox-open{overflow:hidden}
 .project-gallery div{background-image:var(--project-image)}
 .project-paper-cover{background-image:var(--paper-cover)}
 .paper-image span,.paper-cover span,.gallery-item span,.project-index-cover span,.project-paper-cover span{background:rgba(255,255,255,.9);color:#263436;text-shadow:none}
+
+
+/* Very subtle image tint: keep a hint of depth without muddying artwork. */
+.topic-grid .topic:nth-child(1){background-image:linear-gradient(145deg,rgba(20,30,32,.035),rgba(20,30,32,.10)),url("../images/home/publications.jpg")}
+.topic-grid .topic:nth-child(2){background-image:linear-gradient(145deg,rgba(20,30,32,.035),rgba(20,30,32,.10)),url("../images/home/projects.jpg")}
+.topic-grid .topic:nth-child(3){background-image:linear-gradient(145deg,rgba(20,30,32,.035),rgba(20,30,32,.10)),url("../images/home/activities.jpg")}
+.paper-image.paper-haci{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.08)),url("../images/publications/paper-haci.jpg")}
+.paper-image.paper-embodied{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.08)),url("../images/publications/paper-embodied.jpg")}
+.paper-image.paper-xr-education{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.08)),url("../images/publications/paper-xr-education.jpg")}
+.paper-image.paper-ar-guideline{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.08)),url("../images/publications/paper-ar-guideline.jpg")}
+.paper-image.paper-grand-canal{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.08)),url("../images/publications/paper-grand-canal.jpg")}
+.paper-cover{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.085)),var(--cover-image)}
+.gallery-item{background-image:linear-gradient(145deg,rgba(20,30,32,.035),rgba(20,30,32,.10)),var(--gallery-image)}
+.project-index-cover{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.085)),var(--project-cover)}
+.project-gallery div{background-image:linear-gradient(145deg,rgba(20,30,32,.035),rgba(20,30,32,.10)),var(--project-image)}
+.project-paper-cover{background-image:linear-gradient(145deg,rgba(20,30,32,.025),rgba(20,30,32,.085)),var(--paper-cover)}
