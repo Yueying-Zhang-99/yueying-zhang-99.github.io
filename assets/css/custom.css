@@ -251,4 +251,4 @@ body.lightbox-open{overflow:hidden}
 .paper-cover > span{display:none}
 .gallery-item > span{background:rgba(76,76,76,.82);color:#fff}
 
-.paper-cover-gif{background-size:100% 100%,contain;background-position:center;background-repeat:no-repeat;background-color:#e9ece4}
+.paper-cover-gif{aspect-ratio:25/12;min-height:0;align-self:center;padding:0;background-size:cover;background-position:center;background-repeat:no-repeat}
