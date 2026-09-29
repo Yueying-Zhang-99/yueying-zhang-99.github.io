@@ -210,3 +210,22 @@ body.lightbox-open{overflow:hidden}
 @media(max-width:700px){.project-index-card{grid-template-columns:1fr;padding:18px}.project-index-cover{min-height:190px}.project-facts{grid-template-columns:1fr 1fr}.project-gallery{grid-template-columns:1fr}.project-gallery div{min-height:220px}.project-paper-card{grid-template-columns:1fr}.project-paper-cover{min-height:210px}}
 @media(max-width:460px){.project-facts{grid-template-columns:1fr}}
 
+
+
+/* Keep uploaded photos clear: remove dark image overlays. */
+.topic-grid .topic:nth-child(1){background-image:url("../images/home/publications.jpg")}
+.topic-grid .topic:nth-child(2){background-image:url("../images/home/projects.jpg")}
+.topic-grid .topic:nth-child(3){background-image:url("../images/home/awards.jpg")}
+.topic-grid .topic:nth-child(4){background-image:url("../images/home/activities.jpg")}
+.topic-grid .topic:nth-child(5){background-image:url("../images/home/activities.jpg")}
+.paper-image.paper-haci{background-image:url("../images/publications/paper-haci.jpg")}
+.paper-image.paper-embodied{background-image:url("../images/publications/paper-embodied.jpg")}
+.paper-image.paper-xr-education{background-image:url("../images/publications/paper-xr-education.jpg")}
+.paper-image.paper-ar-guideline{background-image:url("../images/publications/paper-ar-guideline.jpg")}
+.paper-image.paper-grand-canal{background-image:url("../images/publications/paper-grand-canal.jpg")}
+.paper-cover{background-image:var(--cover-image)}
+.gallery-item{background-image:var(--gallery-image)}
+.project-index-cover{background-image:var(--project-cover)}
+.project-gallery div{background-image:var(--project-image)}
+.project-paper-cover{background-image:var(--paper-cover)}
+.paper-image span,.paper-cover span,.gallery-item span,.project-index-cover span,.project-paper-cover span{background:rgba(255,255,255,.9);color:#263436;text-shadow:none}
