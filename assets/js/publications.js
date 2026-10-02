@@ -21,7 +21,7 @@ function filterPublications() {
       .some((paper) => !paper.hidden);
     section.hidden = !hasVisiblePaper;
   });
-  emptyMessage.hidden = ![...papers].every((paper) => paper.hidden);
+  if (emptyMessage) emptyMessage.hidden = ![...papers].every((paper) => paper.hidden);
 
   filterButtons.forEach((button) => {
     const active = button.dataset.filter === activeType;
