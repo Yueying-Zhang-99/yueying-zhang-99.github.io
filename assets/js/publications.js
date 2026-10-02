@@ -1,3 +1,38 @@
+(async () => {
+  // Publications is the single source for the cards embedded in project pages.
+  const references = [...document.querySelectorAll('[data-publication-id]')];
+  if (references.length) {
+    try {
+      const sourceURL = new URL('/publications.html', location.origin);
+      const response = await fetch(sourceURL, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`Publications request failed: ${response.status}`);
+      const source = new DOMParser().parseFromString(await response.text(), 'text/html');
+      const cards = references.map((reference) => {
+        const id = reference.dataset.publicationId;
+        const original = source.getElementById(id);
+        if (!original?.matches('.paper-card')) throw new Error(`Unknown publication: ${id}`);
+        const card = original.cloneNode(true);
+        card.open = false;
+        card.querySelectorAll('a[href]').forEach((link) => {
+          link.href = new URL(link.getAttribute('href'), sourceURL).href;
+          if (link.textContent.trim() === 'Related project') {
+            link.href = `${sourceURL.href}#${id}`;
+            link.textContent = 'Publications page';
+          }
+        });
+        // Project cards expand directly into the content, without an abstract label.
+        card.querySelectorAll('h4').forEach((heading) => {
+          if (heading.textContent.trim() === 'Abstract') heading.remove();
+        });
+        return card;
+      });
+      references.forEach((reference, index) => reference.replaceWith(cards[index]));
+    } catch (error) {
+      // Keep the direct publication links usable if loading is unavailable.
+      console.error('Could not load related publications.', error);
+    }
+  }
+
 const filterButtons = document.querySelectorAll('[data-filter]');
 const topicButtons = document.querySelectorAll('[data-topic-filter]');
 const papers = document.querySelectorAll('.paper-card[data-type]');
@@ -119,3 +154,5 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowLeft') moveLightbox(-1);
   if (event.key === 'ArrowRight') moveLightbox(1);
 });
+
+})();
