@@ -1,0 +1,8 @@
+/* Homepage entry covers, updated 10 October 2026. */
+.topic-grid .topic{background-size:cover;background-repeat:no-repeat}
+.topic-grid .topic::before{background:linear-gradient(transparent 65%,rgba(0,0,0,.4));opacity:1}
+.topic-grid .topic span{text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.topic-grid .topic:nth-child(1){background-image:url("publications-20261010.jpg");background-position:center}
+.topic-grid .topic:nth-child(2){background-image:url("projects-20261010.jpg");background-position:50% 62%}
+.topic-grid .topic:nth-child(3){background-image:url("awards-20261010.jpg");background-position:30% 40%}
+.topic-grid .topic:nth-child(4){background-image:url("activities-20261010.jpg");background-position:50% 57%}
