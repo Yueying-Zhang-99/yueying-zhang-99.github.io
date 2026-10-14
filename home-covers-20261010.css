@@ -2,7 +2,7 @@
 .topic-grid .topic{background-size:cover;background-repeat:no-repeat}
 .topic-grid .topic::before{background:linear-gradient(180deg,rgba(255,255,255,.04) 18%,rgba(255,255,255,.24) 56%,rgba(255,255,255,.82) 100%);opacity:1;transition:opacity .25s ease}
 .topic-grid .topic:hover::before{transform:none;opacity:.92}
-.topic-grid .topic span{color:#1d2935;text-shadow:0 1px 2px rgba(255,255,255,.55)}
+.topic-grid .topic span{color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.62),0 0 8px rgba(0,0,0,.25)}
 .topic-grid .topic:nth-child(1){background-image:url("publications-20261010.jpg");background-position:center}
 .topic-grid .topic:nth-child(2){background-image:url("awards-20261010.jpg");background-position:30% 40%}
 .topic-grid .topic:nth-child(3){background-image:url("projects-20261010.jpg");background-position:50% 62%}
