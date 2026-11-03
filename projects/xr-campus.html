@@ -74,6 +74,13 @@
 @media(max-width:600px){.xr-project-gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:165px}.xr-project-gallery span{font-size:10px;left:7px;bottom:7px}.xr-viewer-panel{padding:62px 44px 20px}.xr-viewer img{height:58dvh}.xr-viewer button{width:38px;height:38px}.project-hero-cover{min-height:260px}}
 @media(prefers-reduced-motion:reduce){.xr-project-gallery img{transition:none}.xr-project-gallery a:hover img{transform:none}}
 
+
+.xr-hero-text>div>span{color:#1c7d84;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.xr-project-gallery{grid-auto-rows:auto}
+.xr-project-gallery a{height:220px}
+.xr-project-gallery a.xr-full-poster{grid-column:1/-1;height:auto}
+.xr-project-gallery .xr-full-poster img{width:100%;height:auto;display:block;object-fit:contain}
+@media(max-width:600px){.xr-project-gallery{grid-auto-rows:auto}.xr-project-gallery a{height:165px}.xr-project-gallery a.xr-full-poster{height:auto}}
 </style>
 </head>
 <body class="xr-campus-detail">
@@ -85,7 +92,7 @@
   </nav>
 
   <main class="shell project-detail">
-    <header class="project-hero project-hero-with-cover">
+    <header class="project-hero xr-hero-text">
       <div>
         <span>Funded Project · Bachelor Stage · Completed</span>
         <h1>VR / AR / MR Campus Information Space</h1>
@@ -93,9 +100,6 @@
         <p class="project-lede">An integrated XR framework that rethinks how architectural work is presented, reviewed, discussed, and archived across physical and online environments.</p>
         <div class="project-actions"><a href="#gallery">View project gallery</a><a href="#outputs">Project outputs</a></div>
       </div>
-      <a class="project-hero-cover xr-campus-hero-cover" href="../assets/images/projects/xr-campus/xr-outdoor-mr.jpg" data-xr-gallery aria-label="Open outdoor mixed-reality concept image">
-        <span>Outdoor MR concept</span>
-      </a>
     </header>
 
     <section class="project-facts" aria-label="Project facts">
@@ -167,6 +171,7 @@
       <h2>From system framework to spatial application</h2>
       <p class="gallery-intro">Click to enlarge. Use the arrows or swipe to browse; press Esc or × to close.</p>
       <div class="xr-project-gallery">
+<a class="xr-full-poster" href="/assets/images/projects/xr-campus/project-board.jpg" data-xr-gallery><img loading="lazy" src="/assets/images/projects/xr-campus/project-board.jpg" width="2384" height="3969" alt="Complete original XR Campus project poster"><span>Complete project poster · 项目完整海报</span></a>
 <a href="/assets/images/projects/xr-campus/xr-outdoor-mr.jpg" data-xr-gallery><img loading="lazy" src="/assets/images/projects/xr-campus/xr-outdoor-mr.jpg" alt="Outdoor MR · virtual proposal in its campus context"><span>Outdoor MR · virtual proposal in its campus context</span></a>
 <a href="/assets/images/projects/xr-campus/xr-exhibition-hall.jpg" data-xr-gallery><img loading="lazy" src="/assets/images/projects/xr-campus/xr-exhibition-hall.jpg" alt="Digital exhibition panels in the review hall"><span>Digital exhibition panels in the review hall</span></a>
 <a href="/assets/images/projects/xr-campus/xr-courtyard.jpg" data-xr-gallery><img loading="lazy" src="/assets/images/projects/xr-campus/xr-courtyard.jpg" alt="Courtyard · immersive spatial experience"><span>Courtyard · immersive spatial experience</span></a>
@@ -266,6 +271,7 @@
 </script>
 </body>
 </html>
+
 
 
 
