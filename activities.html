@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Workshops, competitions, conference participation, fieldwork, and courses by Yueying Zhang.">
+  <meta name="description" content="Workshops and creative exchange by Yueying Zhang.">
   <title>Activities | Yueying Zhang</title>
   <link rel="icon" type="image/png" href="/favicon-portrait-transparent.png">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -47,6 +47,21 @@
     .activity-lightbox button{width:42px;height:42px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:26px;cursor:pointer}
     .activity-lightbox .close{position:absolute;top:18px;right:22px;border:0;background:transparent;font-size:32px}
     @media(max-width:600px){.activity-timeline{padding-left:25px}.activity-year>h2:before{left:-22px}.activity-copy{padding:17px}.activity-gallery{padding:0 17px 15px}.activity-lightbox{grid-template-columns:36px minmax(0,1fr) 36px;gap:4px;padding:12px 4px}.activity-lightbox button{width:34px;height:34px;font-size:22px}}
+    /* An image-led journal for activities. */
+    .activity-timeline{padding-left:0}
+    .activity-timeline:before,.activity-year>h2:before{display:none}
+    .activity-year>h2{font-size:13px;letter-spacing:.12em;color:#829093;margin:0 0 16px}
+    .activity-card{display:flex;flex-direction:column;border:0;border-radius:18px;background:#f7faf9;box-shadow:0 8px 32px rgba(37,71,64,.08)}
+    .activity-gallery{order:-1;padding:0}
+    .activity-gallery h4{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}
+    .activity-photos{gap:4px;padding:0 0 5px}
+    .activity-photo{flex:0 0 70%;height:320px;border-radius:0}
+    .activity-photo span{opacity:0;transition:opacity .2s}
+    .activity-photo:hover span,.activity-photo:focus-visible span{opacity:1}
+    .activity-copy{padding:26px 30px 30px}
+    .activity-card h3{font-size:24px}
+    .activity-filter-panel{background:transparent;border:0;padding:0;margin:22px 0 36px}
+    @media(max-width:600px){.activity-timeline{padding-left:0}.activity-photo{flex-basis:85%;height:220px}.activity-copy{padding:21px}.activity-card h3{font-size:20px}}
   </style>
 </head>
 <body>
@@ -56,14 +71,10 @@
     <header class="page-head">
       <div class="eyebrow">Beyond Research</div>
       <h1>Activities</h1>
-      <p class="lead">Competitions, fieldwork, workshops, conferences, and courses, arranged as a timeline.</p>
+      <p class="lead">Moments from workshops, research, and creative exchange.</p>
       <div class="activity-filter-panel" role="group" aria-label="Filter activities by category">
         <button class="active" type="button" data-activity-filter="all" aria-pressed="true">All</button>
-        <button type="button" data-activity-filter="competition" aria-pressed="false">Competitions</button>
-        <button type="button" data-activity-filter="practice" aria-pressed="false">Social Practice</button>
         <button type="button" data-activity-filter="workshop" aria-pressed="false">Workshops</button>
-        <button type="button" data-activity-filter="conference" aria-pressed="false">Conferences</button>
-        <button type="button" data-activity-filter="course" aria-pressed="false">Courses</button>
       </div>
     </header>
     <p class="activity-empty" id="activity-empty" role="status">No activities in this category yet.</p>
@@ -90,76 +101,6 @@
                 <button class="activity-photo" type="button" data-src="assets/images/publications/paper-haci-01.jpg" data-caption="Demonstrating the HACI activity during the conference"><img src="assets/images/publications/paper-haci-01.jpg" alt="Researcher demonstrating the heritage interpretation activity"><span>Live demonstration</span></button>
               </div>
             </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-year" data-year="2023">
-        <h2>2023</h2>
-        <div class="activity-list">
-          <article class="activity-card" data-activity-type="competition">
-            <div class="activity-copy">
-              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2023">2023</time></div>
-              <h3>8th National University Timber Structure Design Competition · Third Prize</h3>
-              <p class="activity-place">National university competition · China</p>
-              <p>Team design project: <em>Timber-Woven Arch, Wan’an Reborn</em>, a reconstruction design for Wan’an Bridge in Pingnan, Fujian. Yueying Zhang contributed as one of six team members.</p>
-              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
-            </div>
-            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-year" data-year="2022">
-        <h2>2022</h2>
-        <div class="activity-list">
-          <article class="activity-card" data-activity-type="competition">
-            <div class="activity-copy">
-              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2022">2022</time></div>
-              <h3>“Qingrun Award” Student Paper Competition · Excellence Award</h3>
-              <p class="activity-place">China · Student research competition</p>
-              <p>Research on the carbon-reduction potential of prefabricated reinforcement cages in rural building envelopes, using the Peixian Party-Mass Activity Centre as a case study. Yueying Zhang contributed as one of two team members.</p>
-              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
-            </div>
-            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-year" data-year="2021">
-        <h2>2021</h2>
-        <div class="activity-list">
-          <article class="activity-card" data-activity-type="competition">
-            <div class="activity-copy">
-              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2021">2021</time></div>
-              <h3>“Youth Drawing the Countryside” Cultural and Creative Design Competition · Bronze Award</h3>
-              <p class="activity-place">Jiangsu Province, China</p>
-              <p>Student-group team project, <em>Sustaining the Canal, Revitalising the Countryside</em>, focused on rural revitalisation and the Grand Canal.</p>
-              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
-            </div>
-            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-year" data-year="2019">
-        <h2>2019</h2>
-        <div class="activity-list">
-          <article class="activity-card" data-activity-type="competition">
-            <div class="activity-copy">
-              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2019">2019</time></div>
-              <h3>China “Internet+” College Student Innovation and Entrepreneurship Competition · Bronze Award</h3>
-              <p class="activity-place">China · National competition</p>
-              <p>Team project, <em>Building Across the World</em>, exploring how architectural planning can support rural revitalisation.</p>
-              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
-            </div>
-            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
-          </article>
-          <article class="activity-card" data-activity-type="competition">
-            <div class="activity-copy">
-              <div class="activity-meta"><span class="activity-type competition">Competition</span><time datetime="2019">2019</time></div>
-              <h3>Yangtze River Delta University Landmark Design Competition · Gold and Best Planning Awards</h3>
-              <p class="activity-place">Yangtze River Delta, China</p>
-              <p>Team project, <em>Cloud · Network</em>, recognised for its planning proposal in a regional university design competition.</p>
-              <div class="paper-links" style="margin-top:14px"><a href="awards.html">See award details</a></div>
-            </div>
-            <div class="activity-gallery"><h4>Photo Gallery</h4><div class="activity-empty-gallery">Competition photos have not been added yet.</div></div>
           </article>
         </div>
       </section>
